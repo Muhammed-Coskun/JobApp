@@ -1,0 +1,22 @@
+{
+ "job_id": "33333333-aaaa-bbbb-cccc-000000000001",
+ "title": "Softwareentwickler:in Java (80-100%)",
+ "company_name": "Voltwerk Energie AG",
+ "place": "Kreuzlingen",
+ "employment_grades": [
+  80,
+  100
+ ],
+ "template_text": "<h2>Deine Aufgaben</h2><ul><li>Du entwickelst unsere Plattform für Netzdaten weiter</li><li>Du schreibst Tests und betreibst die Anwendung mit</li></ul><h2>Dein Profil</h2><p>Erfahrung mit Java und React.</p>",
+ "application_email": "jobs@voltwerk.example",
+ "contact_person": {
+  "firstName": "Lea",
+  "lastName": "Beispiel",
+  "phone": "+41 44 000 00 00"
+ },
+ "_links": {
+  "detail_de": {
+   "href": "https://www.jobs.ch/de/stellenangebote/detail/33333333-aaaa-bbbb-cccc-000000000001/"
+  }
+ }
+}

@@ -1,0 +1,257 @@
+/* Gemeinsame Basis für Popup und Board */
+:root {
+  --paper: #e8edeb;
+  --surface: #ffffff;
+  --card: #ffffff;
+  --card-border: #d3dbd8;
+  --column-base: #f2f5f4;
+  --surface-2: #f6f8f7;
+  --ink: #18211e;
+  --muted: #5b6964;
+  --faint: #8a9792;
+  --line: #d4dbd8;
+  --line-strong: #b9c3bf;
+  --accent: #2f4bd9;
+  --accent-hover: #2339b8;
+  --accent-soft: #e6eaff;
+  --on-accent: #ffffff;
+  --ok: #1f8a5b;
+  --ok-soft: #e1f3ea;
+  --warn: #9a6a00;
+  --warn-soft: #fbf0d4;
+  --danger: #c8372d;
+  --danger-soft: #fbe6e4;
+  --shadow-card: 0 1px 0 rgba(24, 33, 30, 0.06), 0 1px 3px rgba(24, 33, 30, 0.08);
+  --shadow-lift: 0 10px 28px rgba(24, 33, 30, 0.18);
+  --radius-s: 6px;
+  --radius-m: 10px;
+  --font: "Segoe UI Variable Text", "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+  --font-display: "Segoe UI Variable Display", "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #0d1110;
+    --surface: #1a211f;
+    --card: #2a3431;
+    --card-border: #3c4945;
+    --column-base: #121816;
+    --surface-2: #151b19;
+    --ink: #e6ecea;
+    --muted: #9aa8a3;
+    --faint: #6f7d78;
+    --line: #2b3532;
+    --line-strong: #3b4743;
+    --accent: #7088ff;
+    --accent-hover: #8a9dff;
+    --accent-soft: #232c55;
+    --on-accent: #0d1233;
+    --ok: #4cc28c;
+    --ok-soft: #173329;
+    --warn: #e2b54a;
+    --warn-soft: #362c12;
+    --danger: #ff7a70;
+    --danger-soft: #3a1c1a;
+    --shadow-card: 0 1px 0 rgba(0, 0, 0, 0.3), 0 1px 3px rgba(0, 0, 0, 0.35);
+    --shadow-lift: 0 12px 30px rgba(0, 0, 0, 0.5);
+    color-scheme: dark;
+  }
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html, body { margin: 0; }
+
+body {
+  font-family: var(--font);
+  font-size: 14px;
+  line-height: 1.45;
+  color: var(--ink);
+  background: var(--paper);
+  -webkit-font-smoothing: antialiased;
+}
+
+button, input, select, textarea { font: inherit; color: inherit; }
+
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+[hidden] { display: none !important; }
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  height: 34px;
+  padding: 0 14px;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-s);
+  background: var(--surface);
+  color: var(--ink);
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.btn:hover { border-color: var(--ink); }
+.btn.primary { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
+.btn.primary:hover { background: var(--accent-hover); border-color: var(--accent-hover); }
+.btn.danger { color: var(--danger); border-color: transparent; background: transparent; padding: 0 8px; }
+.btn.danger:hover { background: var(--danger-soft); }
+.btn.ghost { border-color: transparent; background: transparent; }
+.btn.ghost:hover { background: var(--surface-2); border-color: var(--line); }
+.btn.icon { width: 34px; padding: 0; justify-content: center; }
+.btn:disabled { opacity: 0.55; cursor: default; }
+
+.link-btn {
+  border: 0;
+  background: none;
+  padding: 2px 0;
+  color: var(--accent);
+  font-weight: 600;
+  cursor: pointer;
+}
+.link-btn:hover { text-decoration: underline; }
+
+/* ---------- Felder ---------- */
+.field { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+.field > span, .field > legend {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--muted);
+}
+.field input, .field select, .field textarea {
+  width: 100%;
+  min-height: 34px;
+  padding: 6px 9px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-s);
+  background: var(--surface);
+  outline: none;
+}
+.field textarea { resize: vertical; line-height: 1.5; }
+.field input:hover, .field select:hover, .field textarea:hover { border-color: var(--line-strong); }
+.field input:focus, .field select:focus, .field textarea:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-soft);
+}
+.field.invalid input { border-color: var(--danger); box-shadow: 0 0 0 3px var(--danger-soft); }
+.field input::placeholder, .field textarea::placeholder { color: var(--faint); }
+
+.row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+
+/* Segment-Auswahl fürs Arbeitsmodell */
+.segmented { border: 0; margin: 0; padding: 0; }
+.segmented legend { padding: 0; margin-bottom: 4px; }
+.segmented .options {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-s);
+  background: var(--surface);
+  overflow: hidden;
+}
+.segmented label { position: relative; }
+.segmented input { position: absolute; opacity: 0; inset: 0; margin: 0; cursor: pointer; }
+.segmented label span {
+  display: block;
+  padding: 6px 4px;
+  text-align: center;
+  font-size: 13px;
+  color: var(--muted);
+  border-left: 1px solid var(--line);
+}
+.segmented label:first-child span { border-left: 0; }
+.segmented input:checked + span { background: var(--ink); color: var(--surface); font-weight: 600; }
+.segmented input:focus-visible + span { outline: 2px solid var(--accent); outline-offset: -2px; }
+
+details.group > summary {
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--muted);
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+details.group > summary::-webkit-details-marker { display: none; }
+details.group > summary::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  transform: rotate(-45deg);
+  transition: transform 0.15s;
+}
+details.group[open] > summary::before { transform: rotate(45deg); }
+details.group .group-body { display: grid; gap: 10px; margin-top: 10px; }
+
+/* Firmen-Kachel mit Initialen */
+.monogram {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: var(--mono-bg, #dfe6ff);
+  color: var(--mono-fg, #1c2a7a);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.01em;
+}
+
+/* Firmenlogo: immer auf Weiss, wie auf den Portalen, damit dunkle Logos im Dark Mode sichtbar bleiben */
+.logo-img {
+  flex: none;
+  display: block;
+  width: 32px;
+  height: 32px;
+  padding: 3px;
+  border-radius: 8px;
+  background: #fff;
+  object-fit: contain;
+  box-shadow: inset 0 0 0 1px rgba(24, 33, 30, 0.12);
+}
+
+.company-row { display: flex; align-items: flex-end; gap: 10px; }
+.company-row .field { flex: 1; }
+
+/* Seitenleiste: Logo neben dem Firmennamen, mit Entfernen-Knopf */
+.logo-tile { position: relative; flex: none; }
+.logo-tile img {
+  display: block;
+  width: 34px;
+  height: 34px;
+  padding: 3px;
+  border-radius: var(--radius-s);
+  background: #fff;
+  object-fit: contain;
+  box-shadow: inset 0 0 0 1px var(--line);
+}
+.logo-remove {
+  position: absolute;
+  top: -7px;
+  right: -7px;
+  display: grid;
+  place-items: center;
+  width: 18px;
+  height: 18px;
+  padding: 0;
+  border: 1px solid var(--line-strong);
+  border-radius: 50%;
+  background: var(--surface);
+  color: var(--muted);
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.12s;
+}
+.logo-tile:hover .logo-remove, .logo-remove:focus-visible { opacity: 1; }
+.logo-remove:hover { color: var(--danger); border-color: var(--danger); }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition: none !important; animation: none !important; }
+}

@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bewerbungs-Tracker</title>
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/panel.css">
+</head>
+<body>
+  <header class="bar">
+    <div class="brand">
+      <img src="icons/icon32.png" alt="" width="20" height="20">
+      <h1 id="heading" data-i18n="panelTitleNew">Save job</h1>
+    </div>
+    <div class="bar-actions">
+      <button type="button" class="btn ghost small" id="openSearch"><span data-i18n="tabSearch">Job search</span><span class="count-pill" id="searchCount" hidden></span></button>
+      <button type="button" class="btn ghost small" id="openBoard" data-i18n="openBoard">Board</button>
+      <button type="button" class="btn ghost icon small" id="closePanel" data-i18n-aria-label="closePanel" data-i18n-title="closePanel">
+        <svg viewBox="0 0 20 20" width="16" height="16" aria-hidden="true"><path d="m5 5 10 10M15 5 5 15" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <div class="source" id="source" data-state="loading" role="status">
+    <span class="source-dot" aria-hidden="true"></span>
+    <span id="sourceText" data-i18n="statusReading">Reading page</span>
+    <span class="source-actions">
+      <button type="button" class="link-btn" id="reread" data-i18n="reread">Read again</button>
+    </span>
+  </div>
+
+  <div class="notice" id="otherPageNotice" hidden>
+    <span data-i18n="otherPage">You are looking at a different page.</span>
+    <button type="button" class="link-btn" id="loadOther" data-i18n="loadOther">Load this page</button>
+  </div>
+  <div class="notice" id="draftNotice" hidden>
+    <span data-i18n="draftRestored">Draft restored.</span>
+    <button type="button" class="link-btn" id="discardDraft" data-i18n="discardDraft">Discard</button>
+  </div>
+  <div class="notice" id="dupNotice" hidden>
+    <strong data-i18n="alreadySaved">Already saved.</strong>
+    <span id="dupText"></span>
+  </div>
+
+  <form id="jobForm" autocomplete="off" novalidate>
+    <div class="company-row">
+      <div class="logo-tile" id="logoTile" hidden>
+        <img id="logoImg" alt="">
+        <button type="button" class="logo-remove" id="logoRemove" data-i18n-aria-label="logoRemove" data-i18n-title="logoRemove">
+          <svg viewBox="0 0 20 20" width="12" height="12" aria-hidden="true"><path d="m5 5 10 10M15 5 5 15" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+      <label class="field" id="companyField">
+        <span data-i18n="fieldCompany">Company</span>
+        <input name="company" data-i18n-placeholder="phCompany">
+      </label>
+    </div>
+    <input type="hidden" name="logo">
+    <label class="field" id="titleField">
+      <span data-i18n="fieldTitle">Position</span>
+      <input name="title" data-i18n-placeholder="phTitle">
+    </label>
+    <div class="row">
+      <label class="field">
+        <span data-i18n="fieldLocation">Location</span>
+        <input name="location" data-i18n-placeholder="phLocation">
+      </label>
+      <label class="field">
+        <span data-i18n="fieldWorkload">Workload</span>
+        <input name="workload" data-i18n-placeholder="phWorkload">
+      </label>
+    </div>
+    <fieldset class="field segmented">
+      <legend data-i18n="fieldWorkModel">Work model</legend>
+      <div class="options">
+        <label><input type="radio" name="workModel" value=""><span data-i18n="wm_open">Open</span></label>
+        <label><input type="radio" name="workModel" value="onsite"><span data-i18n="wm_onsite">On-site</span></label>
+        <label><input type="radio" name="workModel" value="hybrid"><span data-i18n="wm_hybrid">Hybrid</span></label>
+        <label><input type="radio" name="workModel" value="remote"><span data-i18n="wm_remote">Remote</span></label>
+      </div>
+    </fieldset>
+    <label class="field">
+      <span data-i18n="fieldStatus">Status</span>
+      <select name="status"></select>
+    </label>
+    <div class="row">
+      <label class="field">
+        <span data-i18n="fieldSavedAt">Saved on</span>
+        <input type="date" name="savedAt">
+      </label>
+      <label class="field">
+        <span data-i18n="fieldAppliedAt">Applied on</span>
+        <input type="date" name="appliedAt">
+      </label>
+    </div>
+    <label class="field">
+      <span data-i18n="fieldUrl">Link to posting</span>
+      <input name="url" type="url" placeholder="https://">
+    </label>
+    <div class="field">
+      <div class="field-head">
+        <label for="description" data-i18n="fieldDescription">Description</label>
+        <button type="button" class="link-btn" id="useSelection" hidden data-i18n="useSelection">Insert selected text</button>
+      </div>
+      <textarea id="description" name="description" rows="7" data-i18n-placeholder="phDescription"></textarea>
+    </div>
+    <details class="group" id="contactGroup">
+      <summary data-i18n="contactPerson">Contact person</summary>
+      <div class="group-body">
+        <label class="field"><span data-i18n="fieldContactName">Name</span><input name="contactName"></label>
+        <label class="field"><span data-i18n="fieldContactEmail">Email</span><input name="contactEmail" type="email"></label>
+        <label class="field"><span data-i18n="fieldContactPhone">Phone</span><input name="contactPhone" type="tel"></label>
+      </div>
+    </details>
+    <label class="field">
+      <span data-i18n="fieldNotes">Notes</span>
+      <textarea name="notes" rows="3" data-i18n-placeholder="phNotes"></textarea>
+    </label>
+    <p class="form-tools">
+      <button type="button" class="link-btn muted" id="clearForm" data-i18n="clearForm">Start with an empty form</button>
+    </p>
+
+    <footer class="actions">
+      <label class="check">
+        <input type="checkbox" id="closeAfterSave">
+        <span data-i18n="closeAfterSave">Close after saving</span>
+      </label>
+      <span class="form-msg" id="formMsg" role="status"></span>
+      <button type="submit" class="btn primary" id="saveBtn" data-i18n="save">Save</button>
+    </footer>
+  </form>
+
+  <script type="module" src="sidepanel.js"></script>
+</body>
+</html>

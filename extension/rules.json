@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "priority": 1,
+    "action": {
+      "type": "modifyHeaders",
+      "requestHeaders": [
+        { "header": "referer", "operation": "set", "value": "https://www.jobs.ch/de/stellenangebote/" },
+        { "header": "sec-fetch-site", "operation": "set", "value": "same-origin" }
+      ]
+    },
+    "condition": {
+      "urlFilter": "|https://www.jobs.ch/api/v1/public/",
+      "excludedInitiatorDomains": ["jobs.ch", "jobup.ch"],
+      "resourceTypes": ["xmlhttprequest", "other"]
+    }
+  }
+]

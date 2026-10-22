@@ -1,0 +1,121 @@
+{
+ "ergebnisliste": [
+  {
+   "stellenangebotsart": "ARBEIT",
+   "stellenangebotsTitel": "Softwareentwickler (m/w/d) – Allensbach",
+   "quereinstiegGeeignet": false,
+   "arbeitszeitVollzeit": true,
+   "stellenlokationen": [
+    {
+     "adresse": {
+      "ort": "Allensbach",
+      "region": "BADEN_WUERTTEMBERG",
+      "land": "DEUTSCHLAND"
+     },
+     "breite": 47.7150,
+     "laenge": 9.0700
+    }
+   ],
+   "homeofficemoeglich": false,
+   "veroeffentlichungszeitraum": {
+    "von": "{{D0}}"
+   },
+   "datumErsteVeroeffentlichung": "{{D0}}",
+   "hauptberuf": "Softwareentwickler/in",
+   "firma": "Brückenwerk Software GmbH",
+   "referenznummer": "10000-1000000001-S",
+   "entfernung": 4
+  },
+  {
+   "stellenangebotsart": "ARBEIT",
+   "stellenangebotsTitel": "KI Engineer (m/w/d)",
+   "quereinstiegGeeignet": false,
+   "arbeitszeitVollzeit": true,
+   "stellenlokationen": [
+    {
+     "adresse": {
+      "ort": "Ravensburg",
+      "region": "BADEN_WUERTTEMBERG",
+      "land": "DEUTSCHLAND"
+     },
+     "breite": 47.7810,
+     "laenge": 9.6120
+    }
+   ],
+   "homeofficemoeglich": false,
+   "veroeffentlichungszeitraum": {
+    "von": "{{D1}}"
+   },
+   "datumErsteVeroeffentlichung": "{{D1}}",
+   "hauptberuf": "Softwareentwickler/in",
+   "firma": "Kompass Analytics GmbH",
+   "referenznummer": "10000-1000000002-S",
+   "entfernung": 45
+  },
+  {
+   "stellenangebotsart": "ARBEIT",
+   "stellenangebotsTitel": "Frontend Developer (m/w/d)",
+   "quereinstiegGeeignet": false,
+   "arbeitszeitVollzeit": true,
+   "stellenlokationen": [
+    {
+     "adresse": {
+      "ort": "Singen",
+      "region": "BADEN_WUERTTEMBERG",
+      "land": "DEUTSCHLAND"
+     },
+     "breite": 47.7594,
+     "laenge": 8.8403
+    }
+   ],
+   "homeofficemoeglich": false,
+   "veroeffentlichungszeitraum": {
+    "von": "{{D1}}"
+   },
+   "datumErsteVeroeffentlichung": "{{D1}}",
+   "hauptberuf": "Softwareentwickler/in",
+   "firma": "Pixelhafen Web GmbH",
+   "referenznummer": "10000-1000000003-S",
+   "entfernung": 24
+  },
+  {
+   "stellenangebotsart": "ARBEIT",
+   "stellenangebotsTitel": "Lagerist (m/w/d)",
+   "quereinstiegGeeignet": false,
+   "arbeitszeitVollzeit": true,
+   "stellenlokationen": [
+    {
+     "adresse": {
+      "ort": "Konstanz",
+      "region": "BADEN_WUERTTEMBERG",
+      "land": "DEUTSCHLAND"
+     },
+     "breite": 47.6603,
+     "laenge": 9.1758
+    }
+   ],
+   "homeofficemoeglich": false,
+   "veroeffentlichungszeitraum": {
+    "von": "{{D0}}"
+   },
+   "datumErsteVeroeffentlichung": "{{D0}}",
+   "hauptberuf": "Softwareentwickler/in",
+   "firma": "Kranlogistik GmbH",
+   "referenznummer": "10000-1000000004-S",
+   "entfernung": 1
+  }
+ ],
+ "maxErgebnisse": 4,
+ "page": 1,
+ "size": 100,
+ "woOutput": {
+  "bereinigterOrt": "Konstanz",
+  "suchmodus": "UMKREISSUCHE",
+  "koordinaten": [
+   {
+    "lat": 47.607,
+    "lon": 7.6107
+   }
+  ]
+ }
+}

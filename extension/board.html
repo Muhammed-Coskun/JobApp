@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bewerbungs-Tracker</title>
+  <link rel="icon" href="icons/icon32.png">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/board.css">
+  <link rel="stylesheet" href="styles/stats.css">
+  <link rel="stylesheet" href="styles/search.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <img src="icons/icon48.png" alt="" width="26" height="26">
+      <h1 data-i18n="boardTitle">Applications</h1>
+    </div>
+    <nav class="tabs" role="tablist" data-i18n-aria-label="views">
+      <button type="button" role="tab" id="tabBoard" aria-controls="viewBoard" aria-selected="true" data-i18n="tabBoard">Board</button>
+      <button type="button" role="tab" id="tabStats" aria-controls="viewStats" aria-selected="false" tabindex="-1" data-i18n="tabStats">Statistics</button>
+      <button type="button" role="tab" id="tabSearch" aria-controls="viewSearch" aria-selected="false" tabindex="-1"><span data-i18n="tabSearch">Job search</span><span class="tab-count" id="tabSearchCount" hidden></span></button>
+    </nav>
+    <div class="stats-line" id="statsLine" aria-live="polite"></div>
+    <label class="search" id="searchBox">
+      <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="8.5" cy="8.5" r="5.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m13 13 4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      <input type="search" id="search" data-i18n-placeholder="searchPlaceholder" data-i18n-aria-label="searchLabel">
+      <kbd>/</kbd>
+    </label>
+    <div class="top-actions">
+      <button type="button" class="btn primary" id="addJob" data-i18n="addJob">+ Job</button>
+      <button type="button" class="btn icon" id="menuBtn" data-i18n-aria-label="moreActions" aria-haspopup="menu">
+        <svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true"><circle cx="4" cy="10" r="1.7" fill="currentColor"/><circle cx="10" cy="10" r="1.7" fill="currentColor"/><circle cx="16" cy="10" r="1.7" fill="currentColor"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <section id="viewBoard" class="view" role="tabpanel" aria-labelledby="tabBoard">
+    <div class="empty-hint" id="emptyHint" hidden>
+      <p><strong data-i18n="emptyTitle">No jobs yet.</strong> <span data-i18n="emptyText"></span></p>
+    </div>
+    <main class="board" id="board" data-i18n-aria-label="boardLabel"></main>
+  </section>
+
+  <section id="viewStats" class="view stats-view" role="tabpanel" aria-labelledby="tabStats" hidden></section>
+
+  <section id="viewSearch" class="view search-view" role="tabpanel" aria-labelledby="tabSearch" hidden></section>
+
+  <input type="file" id="importFile" accept="application/json,.json" hidden>
+  <input type="file" id="tableFile" accept=".xlsx,.csv,.tsv,.txt,text/csv,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" hidden>
+
+  <dialog id="jobDialog" aria-labelledby="dialogTitle">
+    <form id="jobForm" autocomplete="off" novalidate>
+      <header class="dialog-head">
+        <h2 id="dialogTitle" data-i18n="dialogEdit">Edit job</h2>
+        <button type="button" class="btn ghost icon" id="closeDialog" data-i18n-aria-label="close">
+          <svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true"><path d="m5 5 10 10M15 5 5 15" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </button>
+      </header>
+
+      <div class="dialog-body">
+        <div class="dialog-col">
+          <div class="company-row">
+            <button type="button" class="logo-slot" id="logoSlot" data-i18n-title="logoChange" data-i18n-aria-label="logoChange">
+              <img class="logo-img" id="dLogoImg" alt="" hidden>
+              <span class="monogram" id="dLogoMono" aria-hidden="true"></span>
+            </button>
+            <label class="field" id="dCompanyField"><span data-i18n="fieldCompany">Company</span><input name="company"></label>
+          </div>
+          <input type="hidden" name="logo">
+          <input type="file" id="logoFile" accept="image/*" hidden>
+          <label class="field" id="dTitleField"><span data-i18n="fieldTitle">Position</span><input name="title"></label>
+          <div class="row">
+            <label class="field"><span data-i18n="fieldLocation">Location</span><input name="location"></label>
+            <label class="field"><span data-i18n="fieldWorkload">Workload</span><input name="workload" data-i18n-placeholder="phWorkload"></label>
+          </div>
+          <fieldset class="field segmented">
+            <legend data-i18n="fieldWorkModel">Work model</legend>
+            <div class="options">
+              <label><input type="radio" name="workModel" value=""><span data-i18n="wm_open">Open</span></label>
+              <label><input type="radio" name="workModel" value="onsite"><span data-i18n="wm_onsite">On-site</span></label>
+              <label><input type="radio" name="workModel" value="hybrid"><span data-i18n="wm_hybrid">Hybrid</span></label>
+              <label><input type="radio" name="workModel" value="remote"><span data-i18n="wm_remote">Remote</span></label>
+            </div>
+          </fieldset>
+          <label class="field"><span data-i18n="fieldStatus">Status</span><select name="status"></select></label>
+          <div class="row">
+            <label class="field"><span data-i18n="fieldSavedAt">Saved on</span><input type="date" name="savedAt"></label>
+            <label class="field"><span data-i18n="fieldAppliedAt">Applied on</span><input type="date" name="appliedAt"></label>
+          </div>
+          <section class="rounds" id="roundsBox" aria-labelledby="roundsTitle">
+            <div class="rounds-head">
+              <h3 id="roundsTitle" data-i18n="interviewsTitle">Interviews</h3>
+              <button type="button" class="link-btn" id="addRound" data-i18n="addRound">+ Interview</button>
+            </div>
+            <ol class="round-list" id="roundList"></ol>
+            <p class="rounds-empty" id="roundsEmpty" data-i18n="roundsEmpty">No interview yet.</p>
+          </section>
+          <label class="field"><span data-i18n="fieldUrl">Link to posting</span><input name="url" type="url" placeholder="https://"></label>
+          <details class="group" id="dialogContact">
+            <summary data-i18n="contactPerson">Contact person</summary>
+            <div class="group-body">
+              <label class="field"><span data-i18n="fieldContactName">Name</span><input name="contactName"></label>
+              <div class="row">
+                <label class="field"><span data-i18n="fieldContactEmail">Email</span><input name="contactEmail" type="email"></label>
+                <label class="field"><span data-i18n="fieldContactPhone">Phone</span><input name="contactPhone" type="tel"></label>
+              </div>
+            </div>
+          </details>
+          <div class="history" id="historyBox" hidden>
+            <h3 data-i18n="history">History</h3>
+            <ol id="historyList"></ol>
+          </div>
+        </div>
+        <div class="dialog-col dialog-col-text">
+          <label class="field grow"><span data-i18n="fieldDescription">Description</span><textarea name="description" data-i18n-placeholder="phDescription"></textarea></label>
+          <label class="field"><span data-i18n="fieldNotes">Notes</span><textarea name="notes" rows="4" data-i18n-placeholder="phNotes"></textarea></label>
+        </div>
+      </div>
+
+      <footer class="dialog-foot">
+        <button type="button" class="btn danger" id="deleteJob" data-i18n="deleteJob">Delete job</button>
+        <span class="spacer"></span>
+        <a class="btn ghost" id="openLink" href="#" target="_blank" rel="noopener noreferrer" data-i18n="openPosting">Open posting</a>
+        <button type="button" class="btn" id="cancelDialog" data-i18n="cancel">Cancel</button>
+        <button type="submit" class="btn primary" id="saveJob" data-i18n="save">Save</button>
+      </footer>
+    </form>
+  </dialog>
+
+
+  <dialog id="importDialog" class="import-dialog" aria-labelledby="importTitle">
+    <form id="importForm" novalidate>
+      <header class="dialog-head">
+        <h2 id="importTitle" data-i18n="importTitle">Import from Excel or CSV</h2>
+        <button type="button" class="btn ghost icon" id="closeImport" data-i18n-aria-label="close">
+          <svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true"><path d="m5 5 10 10M15 5 5 15" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </button>
+      </header>
+      <div class="import-body">
+        <p class="import-file" id="importFileInfo"></p>
+        <section>
+          <h3 data-i18n="importColumns">Columns</h3>
+          <p class="import-hint" data-i18n="importColumnsHint"></p>
+          <table class="import-table">
+            <thead><tr><th data-i18n="importColInFile">Column in your file</th><th data-i18n="importExample">Example</th><th data-i18n="importField">Import as</th></tr></thead>
+            <tbody id="importMap"></tbody>
+          </table>
+        </section>
+        <section id="importStatusBox" hidden>
+          <h3 data-i18n="importStatus">Status values</h3>
+          <p class="import-hint" data-i18n="importStatusHint"></p>
+          <table class="import-table">
+            <tbody id="importStatusMap"></tbody>
+          </table>
+        </section>
+      </div>
+      <footer class="dialog-foot">
+        <p class="import-summary" id="importSummary" role="status"></p>
+        <button type="button" class="btn" id="cancelImport" data-i18n="cancel">Cancel</button>
+        <button type="submit" class="btn primary" id="runImport">Import</button>
+      </footer>
+    </form>
+  </dialog>
+
+  <dialog id="searchDialog" class="search-dialog" aria-labelledby="ssTitle">
+    <form id="searchForm" novalidate autocomplete="off">
+      <header class="dialog-head">
+        <h2 id="ssTitle" data-i18n="ssTitle">Search settings</h2>
+        <button type="button" class="btn ghost icon" id="ssClose" data-i18n-aria-label="close">
+          <svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true"><path d="m5 5 10 10M15 5 5 15" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </button>
+      </header>
+      <div class="ss-body">
+        <section>
+          <h3 data-i18n="ssRegions">Regions</h3>
+          <p class="import-hint" data-i18n="ssRegionsHint"></p>
+          <div class="ss-list" id="ssRegions"></div>
+          <button type="button" class="link-btn" id="ssAddRegion" data-i18n="ssAddRegion">+ Region</button>
+        </section>
+        <section>
+          <h3 id="ssTermsTitle" data-i18n="ssTerms">Search terms</h3>
+          <p class="import-hint" id="ssTermsHint" data-i18n="ssTermsHint"></p>
+          <div class="ss-list" id="ssTerms"></div>
+          <button type="button" class="link-btn" id="ssAddTerm" data-i18n="ssAddTerm">+ Search term</button>
+          <label class="ss-check"><input type="checkbox" name="onlyMatching"><span data-i18n="ssOnlyMatching"></span></label>
+          <label class="field ss-exclude"><span data-i18n="ssExclude">Hide titles with</span><input name="exclude" data-i18n-placeholder="ssExcludePh" autocomplete="off"></label>
+        </section>
+        <section>
+          <h3 data-i18n="ssSources">Sources</h3>
+          <div class="ss-sources">
+            <label class="ss-check"><input type="checkbox" name="src_jobcloud"><span>jobs.ch</span><small data-i18n="ssSource_jobcloud"></small></label>
+            <label class="ss-check"><input type="checkbox" name="src_arbeitsagentur"><span>Arbeitsagentur</span><small data-i18n="ssSource_arbeitsagentur"></small></label>
+            <label class="ss-check"><input type="checkbox" name="src_linkedin"><span>LinkedIn</span><small data-i18n="ssSource_linkedin"></small></label>
+          </div>
+        </section>
+        <section>
+          <h3 data-i18n="ssAutoTitle">Automatic search</h3>
+          <div class="ss-auto">
+            <label class="ss-check"><input type="checkbox" name="autoRefresh"><span data-i18n="ssAuto"></span></label>
+            <select name="intervalHours" data-i18n-aria-label="ssInterval">
+              <option value="1" data-i18n="ssEvery1"></option>
+              <option value="3" data-i18n="ssEvery3"></option>
+              <option value="6" data-i18n="ssEvery6"></option>
+              <option value="12" data-i18n="ssEvery12"></option>
+            </select>
+          </div>
+          <p class="import-hint" data-i18n="ssAutoHint"></p>
+        </section>
+      </div>
+      <footer class="dialog-foot">
+        <p class="import-summary" id="ssMsg" role="status"></p>
+        <button type="button" class="btn" id="ssCancel" data-i18n="cancel">Cancel</button>
+        <button type="submit" class="btn primary" id="ssSave" data-i18n="save">Save</button>
+      </footer>
+    </form>
+  </dialog>
+
+  <dialog id="linkDialog" class="link-dialog" aria-labelledby="qlDialogTitle">
+    <form id="linkForm" novalidate autocomplete="off">
+      <header class="dialog-head">
+        <h2 id="qlDialogTitle" data-i18n="qlDialogNew">New link</h2>
+        <button type="button" class="btn ghost icon" id="qlClose" data-i18n-aria-label="close">
+          <svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true"><path d="m5 5 10 10M15 5 5 15" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </button>
+      </header>
+      <div class="ql-body">
+        <label class="field"><span data-i18n="qlUrl">Link</span><input name="url" type="url" inputmode="url" spellcheck="false" autocomplete="off" data-i18n-placeholder="qlUrlPh"></label>
+        <p class="import-hint" data-i18n="qlUrlHint"></p>
+        <label class="field"><span data-i18n="qlName">Name</span><input name="title" maxlength="60" autocomplete="off"></label>
+        <div class="ql-image-field">
+          <span class="ql-image-label" data-i18n="qlImage">Image</span>
+          <div class="ql-image-row">
+            <button type="button" class="ql-preview" id="qlPreview" data-i18n-aria-label="qlImagePick"></button>
+            <div class="ql-image-actions">
+              <div class="ql-image-buttons">
+                <button type="button" class="btn small" id="qlFetchIcon" data-i18n="qlImageSite">From the site</button>
+                <button type="button" class="btn small" id="qlPickImage" data-i18n="qlImagePick">Own image</button>
+                <button type="button" class="btn small ghost" id="qlRemoveImage" data-i18n="qlImageNone">No image</button>
+              </div>
+              <p class="import-hint" data-i18n="qlImageHint"></p>
+            </div>
+          </div>
+          <input type="file" id="qlFile" accept="image/*" hidden>
+        </div>
+      </div>
+      <footer class="dialog-foot">
+        <button type="button" class="btn danger" id="qlDelete" data-i18n="qlDelete">Delete</button>
+        <p class="import-summary" id="qlMsg" role="status"></p>
+        <button type="button" class="btn" id="qlCancel" data-i18n="cancel">Cancel</button>
+        <button type="submit" class="btn primary" data-i18n="save">Save</button>
+      </footer>
+    </form>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"><span id="toastText"></span><button type="button" class="toast-action" id="toastAction" hidden></button></div>
+
+  <script type="module" src="board.js"></script>
+</body>
+</html>

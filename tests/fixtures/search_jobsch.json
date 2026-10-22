@@ -1,0 +1,270 @@
+{
+ "start": 0,
+ "rows": 20,
+ "num_pages": 1,
+ "current_page": 1,
+ "total_hits": 7,
+ "documents": [
+  {
+   "_links": {
+    "detail_de": {
+     "href": "https://www.jobs.ch/de/stellenangebote/detail/33333333-aaaa-bbbb-cccc-000000000001/"
+    },
+    "detail_fr": {
+     "href": "https://www.jobs.ch/fr/offres-emplois/detail/33333333-aaaa-bbbb-cccc-000000000001/"
+    }
+   },
+   "age": 0,
+   "company_visible": true,
+   "job_id": "33333333-aaaa-bbbb-cccc-000000000001",
+   "title": "Softwareentwickler:in Java (80-100%)",
+   "company_name": "Voltwerk Energie AG",
+   "preview": "Kurzbeschreibung der Stelle.",
+   "publication_date": "{{D0}}T09:15:00+02:00",
+   "initial_publication_date": "{{D0}}T09:16:00+02:00",
+   "place": "Kreuzlingen",
+   "employment_grades": [
+    80,
+    100
+   ],
+   "is_active": true,
+   "is_paid": true,
+   "regions": [
+    {
+     "lvl_0": 2,
+     "lvl_1": 14,
+     "lvl_2": 0,
+     "path": "/2/14"
+    }
+   ],
+   "coordinates": {
+    "lat": 47.6450,
+    "lon": 9.1800
+   },
+   "company_logo_file": "https://media.jobs.ch/images/voltwerk-logo/320x320.png",
+   "images": [
+    {
+     "context": "logo",
+     "url": "https://media.jobs.ch/images/voltwerk-logo/320x320.png"
+    }
+   ]
+  },
+  {
+   "_links": {
+    "detail_de": {
+     "href": "https://www.jobs.ch/de/stellenangebote/detail/33333333-aaaa-bbbb-cccc-000000000002/"
+    },
+    "detail_fr": {
+     "href": "https://www.jobs.ch/fr/offres-emplois/detail/33333333-aaaa-bbbb-cccc-000000000002/"
+    }
+   },
+   "age": 0,
+   "company_visible": true,
+   "job_id": "33333333-aaaa-bbbb-cccc-000000000002",
+   "title": "Machine Learning Engineer",
+   "company_name": "Novum Pharma AG",
+   "preview": "Kurzbeschreibung der Stelle.",
+   "publication_date": "{{D1}}T09:15:00+02:00",
+   "initial_publication_date": "{{D1}}T09:16:00+02:00",
+   "place": "Tägerwilen",
+   "employment_grades": [
+    100
+   ],
+   "is_active": true,
+   "is_paid": true,
+   "regions": [
+    {
+     "lvl_0": 2,
+     "lvl_1": 14,
+     "lvl_2": 0,
+     "path": "/2/14"
+    }
+   ],
+   "coordinates": {
+    "lat": 47.6566,
+    "lon": 9.1356
+   }
+  },
+  {
+   "_links": {
+    "detail_de": {
+     "href": "https://www.jobs.ch/de/stellenangebote/detail/33333333-aaaa-bbbb-cccc-000000000003/"
+    },
+    "detail_fr": {
+     "href": "https://www.jobs.ch/fr/offres-emplois/detail/33333333-aaaa-bbbb-cccc-000000000003/"
+    }
+   },
+   "age": 0,
+   "company_visible": true,
+   "job_id": "33333333-aaaa-bbbb-cccc-000000000003",
+   "title": "Senior Frontend Engineer (React)",
+   "company_name": "Datenwerk Solutions AG",
+   "preview": "Kurzbeschreibung der Stelle.",
+   "publication_date": "{{D2}}T09:15:00+02:00",
+   "initial_publication_date": "{{D2}}T09:16:00+02:00",
+   "place": "Weinfelden",
+   "employment_grades": [
+    80,
+    100
+   ],
+   "is_active": true,
+   "is_paid": true,
+   "regions": [
+    {
+     "lvl_0": 2,
+     "lvl_1": 14,
+     "lvl_2": 0,
+     "path": "/2/14"
+    }
+   ],
+   "coordinates": {
+    "lat": 47.5665,
+    "lon": 9.1070
+   }
+  },
+  {
+   "_links": {
+    "detail_de": {
+     "href": "https://www.jobs.ch/de/stellenangebote/detail/33333333-aaaa-bbbb-cccc-000000000004/"
+    },
+    "detail_fr": {
+     "href": "https://www.jobs.ch/fr/offres-emplois/detail/33333333-aaaa-bbbb-cccc-000000000004/"
+    }
+   },
+   "age": 0,
+   "company_visible": true,
+   "job_id": "33333333-aaaa-bbbb-cccc-000000000004",
+   "title": "Software Architekt:in",
+   "company_name": "Stadtspital Mitte",
+   "preview": "Kurzbeschreibung der Stelle.",
+   "publication_date": "{{D1}}T09:15:00+02:00",
+   "initial_publication_date": "{{D1}}T09:16:00+02:00",
+   "place": "Winterthur",
+   "employment_grades": [
+    100
+   ],
+   "is_active": true,
+   "is_paid": true,
+   "regions": [
+    {
+     "lvl_0": 2,
+     "lvl_1": 14,
+     "lvl_2": 0,
+     "path": "/2/14"
+    }
+   ],
+   "coordinates": {
+    "lat": 47.4988,
+    "lon": 8.7237
+   }
+  },
+  {
+   "_links": {
+    "detail_de": {
+     "href": "https://www.jobs.ch/de/stellenangebote/detail/33333333-aaaa-bbbb-cccc-000000000005/"
+    },
+    "detail_fr": {
+     "href": "https://www.jobs.ch/fr/offres-emplois/detail/33333333-aaaa-bbbb-cccc-000000000005/"
+    }
+   },
+   "age": 0,
+   "company_visible": true,
+   "job_id": "33333333-aaaa-bbbb-cccc-000000000005",
+   "title": "Fullstack Developer",
+   "company_name": "Zuger Fintech AG",
+   "preview": "Kurzbeschreibung der Stelle.",
+   "publication_date": "{{D0}}T09:15:00+02:00",
+   "initial_publication_date": "{{D0}}T09:16:00+02:00",
+   "place": "Zug",
+   "employment_grades": [
+    100
+   ],
+   "is_active": true,
+   "is_paid": true,
+   "regions": [
+    {
+     "lvl_0": 2,
+     "lvl_1": 14,
+     "lvl_2": 0,
+     "path": "/2/14"
+    }
+   ],
+   "coordinates": {
+    "lat": 47.1662,
+    "lon": 8.5155
+   }
+  },
+  {
+   "_links": {
+    "detail_de": {
+     "href": "https://www.jobs.ch/de/stellenangebote/detail/33333333-aaaa-bbbb-cccc-000000000006/"
+    },
+    "detail_fr": {
+     "href": "https://www.jobs.ch/fr/offres-emplois/detail/33333333-aaaa-bbbb-cccc-000000000006/"
+    }
+   },
+   "age": 0,
+   "company_visible": true,
+   "job_id": "33333333-aaaa-bbbb-cccc-000000000006",
+   "title": "Werkstudent:in Softwareentwickler",
+   "company_name": "Campus Labs AG",
+   "preview": "Kurzbeschreibung der Stelle.",
+   "publication_date": "{{D1}}T09:15:00+02:00",
+   "initial_publication_date": "{{D1}}T09:16:00+02:00",
+   "place": "Kreuzlingen",
+   "employment_grades": [
+    40
+   ],
+   "is_active": true,
+   "is_paid": true,
+   "regions": [
+    {
+     "lvl_0": 2,
+     "lvl_1": 14,
+     "lvl_2": 0,
+     "path": "/2/14"
+    }
+   ],
+   "coordinates": {
+    "lat": 47.6505,
+    "lon": 9.1750
+   }
+  },
+  {
+   "_links": {
+    "detail_de": {
+     "href": "https://www.jobs.ch/de/stellenangebote/detail/33333333-aaaa-bbbb-cccc-000000000007/"
+    },
+    "detail_fr": {
+     "href": "https://www.jobs.ch/fr/offres-emplois/detail/33333333-aaaa-bbbb-cccc-000000000007/"
+    }
+   },
+   "age": 0,
+   "company_visible": true,
+   "job_id": "33333333-aaaa-bbbb-cccc-000000000007",
+   "title": "Softwareentwickler C#",
+   "company_name": "Altes Inserat AG",
+   "preview": "Kurzbeschreibung der Stelle.",
+   "publication_date": "{{D10}}T09:15:00+02:00",
+   "initial_publication_date": "{{D10}}T09:16:00+02:00",
+   "place": "Kreuzlingen",
+   "employment_grades": [
+    100
+   ],
+   "is_active": true,
+   "is_paid": true,
+   "regions": [
+    {
+     "lvl_0": 2,
+     "lvl_1": 14,
+     "lvl_2": 0,
+     "path": "/2/14"
+    }
+   ],
+   "coordinates": {
+    "lat": 47.6505,
+    "lon": 9.1750
+   }
+  }
+ ]
+}

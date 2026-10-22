@@ -1,0 +1,9 @@
+{"_links":{"detail_de":{"href":"https://www.jobs.ch/de/stellenangebote/detail/22222222-aaaa-bbbb-cccc-000000000002/"},"detail_fr":{"href":"https://www.jobs.ch/fr/offres-emplois/detail/22222222-aaaa-bbbb-cccc-000000000002/"}},
+ "application_email":"jobs@medica.example","company_name":"Medica Institut für Gesundheit AG",
+ "contact_person":{"gender":"FEMALE","firstName":"Petra","lastName":"Beispiel","phone":"0611234567","role":"HR"},
+ "contacts":[{"firstName":"Petra","lastName":"Beispiel","phone":"0611234567"}],
+ "employment_grades":[80,90,100],"job_id":"22222222-aaaa-bbbb-cccc-000000000002","layout_type":"STANDARD",
+ "locations":[{"city":"Zürich","postalCode":"8001","street":"Musterstrasse 1"}],"place":"Zürich","zipcode":"8001",
+ "template":"<!DOCTYPE html><html><head><style>p{color:red}</style></head><body><p>long template</p></body></html>",
+ "template_contact_address":"","template_text":"<h3>Einleitung</h3> <p>Wir sind ein Institut in Zürich.</p> <p><strong>Deine Aufgaben</strong></p> <ul> <li>Betreuung der IT-Systeme</li> <li>Support für Mitarbeitende</li> </ul> <p>Das bringst du mit:\n Erfahrung mit Windows und Linux.</p>",
+ "title":"Informatiker/in (100%)"}

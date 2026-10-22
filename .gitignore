@@ -1,0 +1,5 @@
+node_modules/
+*.zip
+.DS_Store
+# written by Chrome when the extension is loaded from this folder
+extension/_metadata/

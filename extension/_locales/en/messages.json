@@ -1,0 +1,1543 @@
+{
+  "extName": {
+    "message": "Job Application Tracker"
+  },
+  "extShortName": {
+    "message": "Job Tracker"
+  },
+  "extDescription": {
+    "message": "Save jobs from LinkedIn, jobs.ch, jobup.ch, Indeed and career pages with one click and track them on a local Kanban board. No account, no cloud."
+  },
+  "actionTitle": {
+    "message": "Save job (Alt+Shift+J)"
+  },
+  "commandOpen": {
+    "message": "Open the side panel and read the current page"
+  },
+  "colSaved": {
+    "message": "Saved"
+  },
+  "colApplied": {
+    "message": "Applied"
+  },
+  "colInterview": {
+    "message": "Interview"
+  },
+  "colOffer": {
+    "message": "Offer"
+  },
+  "colRejected": {
+    "message": "Rejected"
+  },
+  "kindHeading": {
+    "message": "Meaning for statistics"
+  },
+  "kind_wishlist": {
+    "message": "Wishlist (not applied yet)"
+  },
+  "kind_applied": {
+    "message": "Applied, waiting"
+  },
+  "kind_interview": {
+    "message": "Interview round"
+  },
+  "kind_offer": {
+    "message": "Offer"
+  },
+  "kind_rejected": {
+    "message": "Rejected"
+  },
+  "kind_other": {
+    "message": "Other end state"
+  },
+  "wm_open": {
+    "message": "Open"
+  },
+  "wm_onsite": {
+    "message": "On-site"
+  },
+  "wm_hybrid": {
+    "message": "Hybrid"
+  },
+  "wm_remote": {
+    "message": "Remote"
+  },
+  "fullTime": {
+    "message": "Full-time"
+  },
+  "partTime": {
+    "message": "Part-time"
+  },
+  "fieldCompany": {
+    "message": "Company"
+  },
+  "fieldTitle": {
+    "message": "Position"
+  },
+  "fieldLocation": {
+    "message": "Location"
+  },
+  "fieldWorkload": {
+    "message": "Workload"
+  },
+  "fieldWorkModel": {
+    "message": "Work model"
+  },
+  "fieldStatus": {
+    "message": "Status"
+  },
+  "fieldSavedAt": {
+    "message": "Saved on"
+  },
+  "fieldAppliedAt": {
+    "message": "Applied on"
+  },
+  "fieldUrl": {
+    "message": "Link to posting"
+  },
+  "fieldDescription": {
+    "message": "Description"
+  },
+  "fieldContactName": {
+    "message": "Name"
+  },
+  "fieldContactEmail": {
+    "message": "Email"
+  },
+  "fieldContactPhone": {
+    "message": "Phone"
+  },
+  "fieldNotes": {
+    "message": "Notes"
+  },
+  "contactPerson": {
+    "message": "Contact person"
+  },
+  "csvSource": {
+    "message": "Source"
+  },
+  "phCompany": {
+    "message": "e.g. Acme Inc."
+  },
+  "phTitle": {
+    "message": "e.g. Frontend Engineer"
+  },
+  "phLocation": {
+    "message": "e.g. Berlin"
+  },
+  "phWorkload": {
+    "message": "e.g. 80-100 %"
+  },
+  "phDescription": {
+    "message": "Paste the posting text here"
+  },
+  "phNotes": {
+    "message": "e.g. referral, salary expectation, next step"
+  },
+  "panelTitleNew": {
+    "message": "Save job"
+  },
+  "panelTitleEdit": {
+    "message": "Edit job"
+  },
+  "openBoard": {
+    "message": "Board"
+  },
+  "closePanel": {
+    "message": "Close side panel"
+  },
+  "reread": {
+    "message": "Read again"
+  },
+  "otherPage": {
+    "message": "You switched to another page. Your input here is kept."
+  },
+  "loadOther": {
+    "message": "Load that page"
+  },
+  "draftRestored": {
+    "message": "Unsaved input restored."
+  },
+  "discardDraft": {
+    "message": "Discard"
+  },
+  "alreadySaved": {
+    "message": "Already saved."
+  },
+  "dupText": {
+    "message": "Status $P1$, saved on $P2$. Changes here update the card.",
+    "placeholders": {
+      "p1": {
+        "content": "$1"
+      },
+      "p2": {
+        "content": "$2"
+      }
+    }
+  },
+  "useSelection": {
+    "message": "Insert selected text"
+  },
+  "clearForm": {
+    "message": "Start with an empty form"
+  },
+  "closeAfterSave": {
+    "message": "Close after saving"
+  },
+  "save": {
+    "message": "Save"
+  },
+  "saveChanges": {
+    "message": "Save changes"
+  },
+  "saved": {
+    "message": "Saved"
+  },
+  "changesSaved": {
+    "message": "Changes saved"
+  },
+  "errSave": {
+    "message": "Could not save: $P1$",
+    "placeholders": {
+      "p1": {
+        "content": "$1"
+      }
+    }
+  },
+  "errLoad": {
+    "message": "Error while loading:"
+  },
+  "errNeedCompanyOrTitle": {
+    "message": "Enter a company or a position"
+  },
+  "sourceManual": {
+    "message": "Manual"
+  },
+  "statusReading": {
+    "message": "Reading page…"
+  },
+  "statusDetected": {
+    "message": "$P1$: job detected. Check it, then save.",
+    "placeholders": {
+      "p1": {
+        "content": "$1"
+      }
+    }
+  },
+  "statusPartial": {
+    "message": "$P1$: only partly detected. Please fill in the rest.",
+    "placeholders": {
+      "p1": {
+        "content": "$1"
+      }
+    }
+  },
+  "statusListPage": {
+    "message": "$P1$: select a job in the list first.",
+    "placeholders": {
+      "p1": {
+        "content": "$1"
+      }
+    }
+  },
+  "statusNothing": {
+    "message": "No job data found. Fill in the fields yourself."
+  },
+  "statusNoAccess": {
+    "message": "No access to this page yet. Click the extension icon while the page is open."
+  },
+  "statusRestricted": {
+    "message": "Browser pages can't be read. Fill in the fields yourself."
+  },
+  "boardTitle": {
+    "message": "Applications"
+  },
+  "views": {
+    "message": "Views"
+  },
+  "tabBoard": {
+    "message": "Board"
+  },
+  "tabStats": {
+    "message": "Statistics"
+  },
+  "searchPlaceholder": {
+    "message": "Search company, position, location"
+  },
+  "searchLabel": {
+    "message": "Search jobs"
+  },
+  "addJob": {
+    "message": "+ Job"
+  },
+  "moreActions": {
+    "message": "More actions"
+  },
+  "emptyTitle": {
+    "message": "No jobs saved yet."
+  },
+  "emptyText": {
+    "message": "Open a posting on LinkedIn, jobs.ch, jobup.ch, Indeed or a career page and click the extension icon. Or add one with “+ Job”."
+  },
+  "boardLabel": {
+    "message": "Application board"
+  },
+  "statJobsOne": {
+    "message": "job"
+  },
+  "statJobsMany": {
+    "message": "jobs"
+  },
+  "statApplied": {
+    "message": "applied"
+  },
+  "statLast7": {
+    "message": "in the last 7 days"
+  },
+  "renameHint": {
+    "message": "Double-click to rename"
+  },
+  "columnMenu": {
+    "message": "Edit column $P1$",
+    "placeholders": {
+      "p1": {
+        "content": "$1"
+      }
+    }
+  },
+  "addCard": {
+    "message": "+ Add job"
+  },
+  "noMatches": {
+    "message": "No matches"
+  },
+  "dropHere": {
+    "message": "Drop cards here"
+  },
+  "addColumn": {
+    "message": "+ Add column"
+  },
+  "cardLabel": {
+    "message": "$P1$ at $P2$",
+    "placeholders": {
+      "p1": {
+        "content": "$1"
+      },
+      "p2": {
+        "content": "$2"
+      }
+    }
+  },
+  "untitled": {
+    "message": "Untitled position"
+  },
+  "unknownCompany": {
+    "message": "Company missing"
+  },
+  "openPosting": {
+    "message": "Open posting"
+  },
+  "appliedRel": {
+    "message": "Applied $P1$",
+    "placeholders": {
+      "p1": {
+        "content": "$1"
+      }
+    }
+  },
+  "savedRel": {
+    "message": "Saved $P1$",
+    "placeholders": {
+      "p1": {
+        "content": "$1"
+      }
+    }
+  },
+  "savedOn": {
+    "message": "Saved on $P1$",
+    "placeholders": {
+      "p1": {
+        "content": "$1"
+      }
+    }
+  },
+  "appliedOn": {
+    "message": "Applied on $P1$",
+    "placeholders": {
+      "p1": {
+        "content": "$1"
+      }
+    }
+  },
+  "relToday": {
+    "message": "today"
+  },
+  "relYesterday": {
+    "message": "yesterday"
+  },
+  "relDaysAgo": {
+    "message": "$P1$ days ago",
+    "placeholders": {
+      "p1": {
+        "content": "$1"
+      }
+    }
+  },
+  "relOnDate": {
+    "message": "on $P1$",
+    "placeholders": {
+      "p1": {
+        "content": "$1"
+      }
+    }
+  },
+  "moved": {
+    "message": "Moved to “$P1$”",
+    "placeholders": {
+      "p1": {
+        "content": "$1"
+      }
+    }
+  },
+  "movedWithDate": {
+    "message": "Moved to “$P1$”, application date set to today",
+    "placeholders": {
+      "p1": {
+        "content": "$1"
+      }
+    }
+  },
+  "columnName": {
+    "message": "Column name"
+  },
+  "newColumn": {
+    "message": "New column"
+  },
+  "confirmDeleteColumn": {
+    "message": "“$P1$” contains $P2$ job(s). They will move to “$P3$”. Delete the column anyway?",
+    "placeholders": {
+      "p1": {
+        "content": "$1"
+      },
+      "p2": {
+        "content": "$2"
+      },
+      "p3": {
+        "content": "$3"
+      }
+    }
+  },
+  "columnDeleted": {
+    "message": "Column “$P1$” deleted",
+    "placeholders": {
+      "p1": {
+        "content": "$1"
+      }
+    }
+  },
+  "rename": {
+    "message": "Rename"
+  },
+  "columnColor": {
+    "message": "Column color"
+  },
+  "colorLabel": {
+    "message": "Color $P1$",
+    "placeholders": {
+      "p1": {
+        "content": "$1"
+      }
+    }
+  },
+  "moveLeft": {
+    "message": "Move left"
+  },
+  "moveRight": {
+    "message": "Move right"
+  },
+  "deleteColumn": {
+    "message": "Delete column"
+  },
+  "dialogEdit": {
+    "message": "Edit job"
+  },
+  "dialogNew": {
+    "message": "New job"
+  },
+  "saveJob": {
+    "message": "Save job"
+  },
+  "jobSaved": {
+    "message": "Job saved"
+  },
+  "jobGone": {
+    "message": "This job no longer exists"
+  },
+  "jobDeleted": {
+    "message": "Job deleted"
+  },
+  "undo": {
+    "message": "Undo"
+  },
+  "jobRestored": {
+    "message": "Job restored"
+  },
+  "deleteJob": {
+    "message": "Delete job"
+  },
+  "cancel": {
+    "message": "Cancel"
+  },
+  "close": {
+    "message": "Close"
+  },
+  "history": {
+    "message": "History"
+  },
+  "confirmDiscard": {
+    "message": "Discard unsaved changes?"
+  },
+  "exportJson": {
+    "message": "Export backup (JSON)"
+  },
+  "importJson": {
+    "message": "Import backup (JSON)"
+  },
+  "exportCsv": {
+    "message": "Export as CSV (Excel)"
+  },
+  "wipeAll": {
+    "message": "Delete all data…"
+  },
+  "confirmWipe": {
+    "message": "Delete all saved jobs and columns from this browser? This cannot be undone. Export a backup first if you want to keep them."
+  },
+  "wiped": {
+    "message": "All data deleted"
+  },
+  "backupExported": {
+    "message": "Backup exported"
+  },
+  "csvExported": {
+    "message": "CSV exported"
+  },
+  "backupImported": {
+    "message": "Backup imported: $P1$ new, $P2$ updated",
+    "placeholders": {
+      "p1": {
+        "content": "$1"
+      },
+      "p2": {
+        "content": "$2"
+      }
+    }
+  },
+  "errNotJson": {
+    "message": "This file is not valid JSON"
+  },
+  "errNotABackup": {
+    "message": "This file is not a backup of this extension."
+  },
+  "statsRange": {
+    "message": "Time range"
+  },
+  "rangeAll": {
+    "message": "All"
+  },
+  "range30": {
+    "message": "30 days"
+  },
+  "range90": {
+    "message": "90 days"
+  },
+  "range365": {
+    "message": "12 months"
+  },
+  "copySankeymatic": {
+    "message": "Copy for SankeyMATIC"
+  },
+  "copied": {
+    "message": "Copied"
+  },
+  "exportPng": {
+    "message": "Save as image"
+  },
+  "kpiApplications": {
+    "message": "Applications"
+  },
+  "kpiResponseRate": {
+    "message": "Response rate"
+  },
+  "kpiInterviewRate": {
+    "message": "Interview rate"
+  },
+  "kpiOffers": {
+    "message": "Offers"
+  },
+  "kpiAvgDays": {
+    "message": "Avg. time to first response"
+  },
+  "daysOne": {
+    "message": "$P1$ day",
+    "placeholders": {
+      "p1": {
+        "content": "$1"
+      }
+    }
+  },
+  "daysMany": {
+    "message": "$P1$ days",
+    "placeholders": {
+      "p1": {
+        "content": "$1"
+      }
+    }
+  },
+  "sankeyTitle": {
+    "message": "Where your applications went"
+  },
+  "sankeySubtitle": {
+    "message": "Every application from sending to where it stands now, round by round."
+  },
+  "sankeyApplied": {
+    "message": "Applications"
+  },
+  "sankeyNoReply": {
+    "message": "No response yet"
+  },
+  "sankeyActive": {
+    "message": "In progress"
+  },
+  "showTable": {
+    "message": "Show as table"
+  },
+  "tableFrom": {
+    "message": "From"
+  },
+  "tableTo": {
+    "message": "To"
+  },
+  "tableCount": {
+    "message": "Count"
+  },
+  "weeklyTitle": {
+    "message": "Applications per week"
+  },
+  "weeklySubtitle": {
+    "message": "By application date"
+  },
+  "weekLabel": {
+    "message": "W$P1$",
+    "placeholders": {
+      "p1": {
+        "content": "$1"
+      }
+    }
+  },
+  "weeklyTip": {
+    "message": "$P1$ (from $P2$): $P3$ applications",
+    "placeholders": {
+      "p1": {
+        "content": "$1"
+      },
+      "p2": {
+        "content": "$2"
+      },
+      "p3": {
+        "content": "$3"
+      }
+    }
+  },
+  "sourcesTitle": {
+    "message": "Sources"
+  },
+  "sourcesSubtitle": {
+    "message": "Where you found the jobs you applied to"
+  },
+  "sourceTip": {
+    "message": "$P1$: $P2$ applications, $P3$ with interview",
+    "placeholders": {
+      "p1": {
+        "content": "$1"
+      },
+      "p2": {
+        "content": "$2"
+      },
+      "p3": {
+        "content": "$3"
+      }
+    }
+  },
+  "interviewsOne": {
+    "message": "$P1$ interview",
+    "placeholders": {
+      "p1": {
+        "content": "$1"
+      }
+    }
+  },
+  "interviewsMany": {
+    "message": "$P1$ interviews",
+    "placeholders": {
+      "p1": {
+        "content": "$1"
+      }
+    }
+  },
+  "otherSources": {
+    "message": "Other"
+  },
+  "statsEmpty": {
+    "message": "No applications in this time range yet. As soon as cards leave the first column, your history shows up here."
+  },
+  "statsEmptyShort": {
+    "message": "No data yet"
+  },
+  "pngTitle": {
+    "message": "My job search"
+  },
+  "pngFooter": {
+    "message": "$P1$ applications, as of $P2$. Made with Job Application Tracker",
+    "placeholders": {
+      "p1": {
+        "content": "$1"
+      },
+      "p2": {
+        "content": "$2"
+      }
+    }
+  },
+  "importTable": {
+    "message": "Import from Excel or CSV…"
+  },
+  "importTitle": {
+    "message": "Import from Excel or CSV"
+  },
+  "importFileInfo": {
+    "message": "$P1$: $P2$ rows",
+    "placeholders": {
+      "p1": {
+        "content": "$1"
+      },
+      "p2": {
+        "content": "$2"
+      }
+    }
+  },
+  "importColumns": {
+    "message": "Columns"
+  },
+  "importColumnsHint": {
+    "message": "Matched by their headings. Change what is wrong, or ignore a column."
+  },
+  "importColInFile": {
+    "message": "Column in your file"
+  },
+  "importExample": {
+    "message": "Example"
+  },
+  "importField": {
+    "message": "Import as"
+  },
+  "importIgnore": {
+    "message": "Ignore"
+  },
+  "importStatus": {
+    "message": "Status values"
+  },
+  "importStatusHint": {
+    "message": "Which board column should each value go to?"
+  },
+  "importStatusAuto": {
+    "message": "Automatic (applied if there is a date)"
+  },
+  "importNeedName": {
+    "message": "Pick at least the company or the position column."
+  },
+  "importSummary": {
+    "message": "Jobs to import: $P1$.",
+    "placeholders": {
+      "p1": {
+        "content": "$1"
+      }
+    }
+  },
+  "importSummaryDup": {
+    "message": "Skipped as duplicates: $P1$.",
+    "placeholders": {
+      "p1": {
+        "content": "$1"
+      }
+    }
+  },
+  "importSummaryEmpty": {
+    "message": "Ignored (no company or position): $P1$.",
+    "placeholders": {
+      "p1": {
+        "content": "$1"
+      }
+    }
+  },
+  "importRun": {
+    "message": "Import $P1$ jobs",
+    "placeholders": {
+      "p1": {
+        "content": "$1"
+      }
+    }
+  },
+  "importDone": {
+    "message": "$P1$ jobs imported",
+    "placeholders": {
+      "p1": {
+        "content": "$1"
+      }
+    }
+  },
+  "importUndone": {
+    "message": "Import undone"
+  },
+  "importErrEmpty": {
+    "message": "No rows found in this file."
+  },
+  "importErrXls": {
+    "message": "Old .xls files cannot be read. Save it as .xlsx or .csv in Excel and try again."
+  },
+  "importErrRead": {
+    "message": "This file could not be read. Is it an Excel (.xlsx) or CSV file?"
+  },
+  "sourceImport": {
+    "message": "Import"
+  },
+  "field_source": {
+    "message": "Source"
+  },
+  "field_interview": {
+    "message": "Interview (date or round)"
+  },
+  "sourceCompanySite": {
+    "message": "Company website"
+  },
+  "historyNoDate": {
+    "message": "date unknown"
+  },
+  "stepRel": {
+    "message": "$P1$ $P2$",
+    "placeholders": {
+      "p1": {
+        "content": "$1"
+      },
+      "p2": {
+        "content": "$2"
+      }
+    }
+  },
+  "roundLabel": {
+    "message": "Interview $P1$",
+    "placeholders": {
+      "p1": {
+        "content": "$1"
+      }
+    }
+  },
+  "interviewsTitle": {
+    "message": "Interviews"
+  },
+  "addRound": {
+    "message": "+ Interview"
+  },
+  "roundsEmpty": {
+    "message": "No interview yet. Add each round with its date."
+  },
+  "roundDate": {
+    "message": "Date"
+  },
+  "roundTime": {
+    "message": "Time"
+  },
+  "roundKind": {
+    "message": "Type of interview"
+  },
+  "roundKindAny": {
+    "message": "Type"
+  },
+  "roundKind_phone": {
+    "message": "Phone"
+  },
+  "roundKind_video": {
+    "message": "Video"
+  },
+  "roundKind_onsite": {
+    "message": "On-site"
+  },
+  "roundNote": {
+    "message": "Note"
+  },
+  "roundNotePh": {
+    "message": "With whom, what was it about?"
+  },
+  "roundRemove": {
+    "message": "Remove $P1$",
+    "placeholders": {
+      "p1": {
+        "content": "$1"
+      }
+    }
+  },
+  "roundPlanned": {
+    "message": "$P1$ planned on $P2$",
+    "placeholders": {
+      "p1": {
+        "content": "$1"
+      },
+      "p2": {
+        "content": "$2"
+      }
+    }
+  },
+  "roundDone": {
+    "message": "$P1$ on $P2$",
+    "placeholders": {
+      "p1": {
+        "content": "$1"
+      },
+      "p2": {
+        "content": "$2"
+      }
+    }
+  },
+  "logoChange": {
+    "message": "Company logo: choose an image, drop one here or paste it"
+  },
+  "logoPick": {
+    "message": "Choose another image…"
+  },
+  "logoRemove": {
+    "message": "Remove logo"
+  },
+  "logoInvalid": {
+    "message": "That image could not be used as a logo."
+  },
+  "sankeyAfterApplication": {
+    "message": "without an interview"
+  },
+  "sankeyAfterRound": {
+    "message": "after $P1$",
+    "placeholders": {
+      "p1": {
+        "content": "$1"
+      }
+    }
+  },
+  "pieTitle": {
+    "message": "Where your applications stand"
+  },
+  "pieSubtitleStatus": {
+    "message": "Current state of every application."
+  },
+  "pieSubtitleSource": {
+    "message": "Where you found the jobs you applied to."
+  },
+  "pieByStatus": {
+    "message": "Status"
+  },
+  "pieBySource": {
+    "message": "Source"
+  },
+  "ivTitle": {
+    "message": "Your interviews"
+  },
+  "ivSubtitle": {
+    "message": "Every round and how it ended. Click a job to open it."
+  },
+  "ivEmpty": {
+    "message": "No interviews yet. Add rounds in a job, or move it to the interview column."
+  },
+  "ivApplied": {
+    "message": "Applied"
+  },
+  "tabSearch": {
+    "message": "Job search"
+  },
+  "tabSearchNew": {
+    "message": "Job search, $P1$ new",
+    "placeholders": {
+      "p1": {
+        "content": "$1"
+      }
+    }
+  },
+  "searchLoading": {
+    "message": "Loading …"
+  },
+  "searchAll": {
+    "message": "All"
+  },
+  "searchRegionLabel": {
+    "message": "Region"
+  },
+  "searchDaysLabel": {
+    "message": "Posted"
+  },
+  "searchToday": {
+    "message": "Today"
+  },
+  "searchDays": {
+    "message": "$P1$ days",
+    "placeholders": {
+      "p1": {
+        "content": "$1"
+      }
+    }
+  },
+  "searchTermsLabel": {
+    "message": "Search terms"
+  },
+  "searchNewOnly": {
+    "message": "Only new"
+  },
+  "searchHideSenior": {
+    "message": "Hide senior and lead"
+  },
+  "searchRefresh": {
+    "message": "Refresh"
+  },
+  "searchSettings": {
+    "message": "Search settings"
+  },
+  "searchStarting": {
+    "message": "Searching …"
+  },
+  "searchRunning": {
+    "message": "Searching … $P1$ of $P2$",
+    "placeholders": {
+      "p1": {
+        "content": "$1"
+      },
+      "p2": {
+        "content": "$2"
+      }
+    }
+  },
+  "searchUpdated": {
+    "message": "Updated $P1$",
+    "placeholders": {
+      "p1": {
+        "content": "$1"
+      }
+    }
+  },
+  "searchNever": {
+    "message": "Not searched yet"
+  },
+  "searchFrom": {
+    "message": "results from $P1$",
+    "placeholders": {
+      "p1": {
+        "content": "$1"
+      }
+    }
+  },
+  "searchFailed": {
+    "message": "The search failed. Try again later."
+  },
+  "searchErrBusy": {
+    "message": "too many requests"
+  },
+  "searchErrHttp": {
+    "message": "error $P1$",
+    "placeholders": {
+      "p1": {
+        "content": "$1"
+      }
+    }
+  },
+  "searchErrTimeout": {
+    "message": "no answer"
+  },
+  "searchErrNetwork": {
+    "message": "not reachable"
+  },
+  "searchSources": {
+    "message": "Found on"
+  },
+  "searchFirst": {
+    "message": "Click Refresh to search jobs.ch, the Arbeitsagentur and LinkedIn."
+  },
+  "searchNoSetup": {
+    "message": "Nothing set up yet. Choose in the settings where and what to search for."
+  },
+  "searchEmpty": {
+    "message": "No postings for this filter."
+  },
+  "searchDayToday": {
+    "message": "Today"
+  },
+  "searchDayYesterday": {
+    "message": "Yesterday"
+  },
+  "searchNoDate": {
+    "message": "No date"
+  },
+  "searchJobsOne": {
+    "message": "1 job"
+  },
+  "searchJobsMany": {
+    "message": "$P1$ jobs",
+    "placeholders": {
+      "p1": {
+        "content": "$1"
+      }
+    }
+  },
+  "searchNew": {
+    "message": "New"
+  },
+  "searchKm": {
+    "message": "$P1$ km",
+    "placeholders": {
+      "p1": {
+        "content": "$1"
+      }
+    }
+  },
+  "searchSave": {
+    "message": "Save"
+  },
+  "searchSaving": {
+    "message": "Saving …"
+  },
+  "searchSaved": {
+    "message": "Saved to your board: $P1$",
+    "placeholders": {
+      "p1": {
+        "content": "$1"
+      }
+    }
+  },
+  "searchOpen": {
+    "message": "Open"
+  },
+  "searchAlsoOn": {
+    "message": "Also posted on:"
+  },
+  "searchDismiss": {
+    "message": "Hide"
+  },
+  "searchDismissLabel": {
+    "message": "Hide $P1$",
+    "placeholders": {
+      "p1": {
+        "content": "$1"
+      }
+    }
+  },
+  "searchDismissed": {
+    "message": "Hidden: $P1$",
+    "placeholders": {
+      "p1": {
+        "content": "$1"
+      }
+    }
+  },
+  "searchRestore": {
+    "message": "Show again"
+  },
+  "searchOnBoard": {
+    "message": "On your board"
+  },
+  "searchShowHidden": {
+    "message": "Show them"
+  },
+  "searchHideHidden": {
+    "message": "Hide them"
+  },
+  "searchSum_board": {
+    "message": "$P1$ already on your board",
+    "placeholders": {
+      "p1": {
+        "content": "$1"
+      }
+    }
+  },
+  "searchSum_dismissed": {
+    "message": "$P1$ hidden by you",
+    "placeholders": {
+      "p1": {
+        "content": "$1"
+      }
+    }
+  },
+  "searchSum_nomatch": {
+    "message": "$P1$ with other titles",
+    "placeholders": {
+      "p1": {
+        "content": "$1"
+      }
+    }
+  },
+  "searchSum_senior": {
+    "message": "$P1$ senior or lead",
+    "placeholders": {
+      "p1": {
+        "content": "$1"
+      }
+    }
+  },
+  "searchSum_excluded": {
+    "message": "$P1$ with an excluded word",
+    "placeholders": {
+      "p1": {
+        "content": "$1"
+      }
+    }
+  },
+  "reason_nomatch": {
+    "message": "Title does not match"
+  },
+  "reason_senior": {
+    "message": "Senior or lead"
+  },
+  "reason_excluded": {
+    "message": "Excluded word"
+  },
+  "ssTitle": {
+    "message": "Search settings"
+  },
+  "ssRegions": {
+    "message": "Regions"
+  },
+  "ssRegionsHint": {
+    "message": "Distance as the crow flies. A region only shows jobs in its own country. Swiss regions are searched on jobs.ch, German ones at the Arbeitsagentur, both on LinkedIn."
+  },
+  "ssActive": {
+    "message": "Search this region"
+  },
+  "ssActiveLabel": {
+    "message": "Search $P1$",
+    "placeholders": {
+      "p1": {
+        "content": "$1"
+      }
+    }
+  },
+  "ssRegionName": {
+    "message": "Name"
+  },
+  "ssCountry": {
+    "message": "Country"
+  },
+  "ssCountry_de": {
+    "message": "Germany"
+  },
+  "ssCountry_ch": {
+    "message": "Switzerland"
+  },
+  "ssPlace": {
+    "message": "Place"
+  },
+  "ssRadius": {
+    "message": "Radius (km)"
+  },
+  "ssAddRegion": {
+    "message": "+ Region"
+  },
+  "ssRemove": {
+    "message": "Remove"
+  },
+  "ssRemoveRegion": {
+    "message": "Remove region $P1$",
+    "placeholders": {
+      "p1": {
+        "content": "$1"
+      }
+    }
+  },
+  "ssRemoveTerm": {
+    "message": "Remove search term $P1$",
+    "placeholders": {
+      "p1": {
+        "content": "$1"
+      }
+    }
+  },
+  "ssTerms": {
+    "message": "Search terms"
+  },
+  "ssTermsHint": {
+    "message": "Each group is a filter on the job search tab. All terms are searched; a job counts when its title contains one of them."
+  },
+  "ssTermName": {
+    "message": "Group"
+  },
+  "ssTermQueries": {
+    "message": "Terms, separated by commas"
+  },
+  "ssAddTerm": {
+    "message": "+ Search term"
+  },
+  "ssOnlyMatching": {
+    "message": "Only show jobs whose title contains a search term"
+  },
+  "ssExclude": {
+    "message": "Hide titles with"
+  },
+  "ssExcludePh": {
+    "message": "e.g. sales, warehouse"
+  },
+  "ssSources": {
+    "message": "Sources"
+  },
+  "ssSource_jobcloud": {
+    "message": "Switzerland"
+  },
+  "ssSource_arbeitsagentur": {
+    "message": "Germany"
+  },
+  "ssSource_linkedin": {
+    "message": "public search, without your account"
+  },
+  "ssAutoTitle": {
+    "message": "Automatic search"
+  },
+  "ssAuto": {
+    "message": "Search in the background"
+  },
+  "ssInterval": {
+    "message": "How often"
+  },
+  "ssEvery1": {
+    "message": "every hour"
+  },
+  "ssEvery3": {
+    "message": "every 3 hours"
+  },
+  "ssEvery6": {
+    "message": "every 6 hours"
+  },
+  "ssEvery12": {
+    "message": "every 12 hours"
+  },
+  "ssAutoHint": {
+    "message": "Runs while Chrome is open, no tab needed. The number of new jobs appears on the extension icon."
+  },
+  "ssNeedRegion": {
+    "message": "Add at least one region with a place and one search term."
+  },
+  "ssLocating": {
+    "message": "Looking up places …"
+  },
+  "ssPlaceNotFound": {
+    "message": "Not found: $P1$. Distances there are not checked.",
+    "placeholders": {
+      "p1": {
+        "content": "$1"
+      }
+    }
+  },
+  "relJustNow": {
+    "message": "just now"
+  },
+  "searchUpdatedNow": {
+    "message": "Updated just now"
+  },
+  "searchOffline": {
+    "message": "Job portals not reachable"
+  },
+  "searchOfflineHint": {
+    "message": "jobs.ch, the Arbeitsagentur and LinkedIn could not be reached. Check your internet connection and click Refresh."
+  },
+  "searchErrAnswer": {
+    "message": "unexpected answer"
+  },
+  "ssWrongCountry": {
+    "message": "$P1$ is in $P2$, not in $P3$. Please check the place of this region.",
+    "placeholders": {
+      "p1": {
+        "content": "$1"
+      },
+      "p2": {
+        "content": "$2"
+      },
+      "p3": {
+        "content": "$3"
+      }
+    }
+  },
+  "ssCountry_fr": {
+    "message": "France"
+  },
+  "ssCountry_at": {
+    "message": "Austria"
+  },
+  "ssCountry_li": {
+    "message": "Liechtenstein"
+  },
+  "searchDetails": {
+    "message": "Details"
+  },
+  "searchDetailsHide": {
+    "message": "Hide details"
+  },
+  "searchDetailsNone": {
+    "message": "no details yet (searched before version 1.5)"
+  },
+  "searchDetailsRequests": {
+    "message": "$P1$ requests",
+    "placeholders": {
+      "p1": {
+        "content": "$1"
+      }
+    }
+  },
+  "searchDetailsReceived": {
+    "message": "$P1$ postings received",
+    "placeholders": {
+      "p1": {
+        "content": "$1"
+      }
+    }
+  },
+  "searchDetailsOlder": {
+    "message": "$P1$ older than $P2$ days",
+    "placeholders": {
+      "p1": {
+        "content": "$1"
+      },
+      "p2": {
+        "content": "$2"
+      }
+    }
+  },
+  "searchDetailsFar": {
+    "message": "$P1$ too far away",
+    "placeholders": {
+      "p1": {
+        "content": "$1"
+      }
+    }
+  },
+  "searchDetailsCountry": {
+    "message": "$P1$ in the other country",
+    "placeholders": {
+      "p1": {
+        "content": "$1"
+      }
+    }
+  },
+  "searchDetailsKept": {
+    "message": "$P1$ kept",
+    "placeholders": {
+      "p1": {
+        "content": "$1"
+      }
+    }
+  },
+  "searchDetailsNoCoords": {
+    "message": "no coordinates"
+  },
+  "qlTitle": {
+    "message": "Quick links"
+  },
+  "qlHint": {
+    "message": "Your searches on the job sites, one click away. Drag to reorder (or Alt + arrow keys)."
+  },
+  "qlEmpty": {
+    "message": "No links yet. Add your searches on LinkedIn, jobs.ch and others here."
+  },
+  "qlAdd": {
+    "message": "Add link"
+  },
+  "qlEdit": {
+    "message": "Edit $P1$",
+    "placeholders": {
+      "p1": {
+        "content": "$1"
+      }
+    }
+  },
+  "qlDialogNew": {
+    "message": "New link"
+  },
+  "qlDialogEdit": {
+    "message": "Edit link"
+  },
+  "qlName": {
+    "message": "Name"
+  },
+  "qlNamePh": {
+    "message": "e.g. LinkedIn Berlin"
+  },
+  "qlUrl": {
+    "message": "Link"
+  },
+  "qlUrlPh": {
+    "message": "https://www.linkedin.com/jobs/search/?keywords=..."
+  },
+  "qlUrlHint": {
+    "message": "Search on the site as usual, set the filters, then copy the address from the address bar and paste it here. You can also drag a link onto the quick links."
+  },
+  "qlUrlInvalid": {
+    "message": "Please enter a web address (https://...)."
+  },
+  "qlImage": {
+    "message": "Image"
+  },
+  "qlImageSite": {
+    "message": "From the site"
+  },
+  "qlImagePick": {
+    "message": "Own image..."
+  },
+  "qlImageNone": {
+    "message": "No image"
+  },
+  "qlImageHint": {
+    "message": "Or drop an image on the square, or paste one with Ctrl+V."
+  },
+  "qlImageLoading": {
+    "message": "Loading the icon of the site..."
+  },
+  "qlImageNotFound": {
+    "message": "No icon found on that site. Choose your own image."
+  },
+  "qlDelete": {
+    "message": "Delete"
+  },
+  "qlDeleted": {
+    "message": "Link deleted"
+  },
+  "qlSaveFailed": {
+    "message": "Could not save the quick links."
+  },
+  "qlJobsIn": {
+    "message": "Jobs $P1$",
+    "placeholders": {
+      "p1": {
+        "content": "$1"
+      }
+    }
+  },
+  "searchErrPartial": {
+    "message": "partly: $P1$",
+    "placeholders": {
+      "p1": {
+        "content": "$1"
+      }
+    }
+  },
+  "searchDetailsFailed": {
+    "message": "$P1$ failed ($P2$)",
+    "placeholders": {
+      "p1": {
+        "content": "$1"
+      },
+      "p2": {
+        "content": "$2"
+      }
+    }
+  },
+  "searchSetup": {
+    "message": "Set up the job search"
+  }
+}
